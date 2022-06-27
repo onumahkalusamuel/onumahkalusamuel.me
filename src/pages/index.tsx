@@ -11,7 +11,7 @@ const Page = () => {
           <div className="w-full md:w-1/2">
             <LogoName className="w-full" />
             <h2 className="text-2xl font-light mb-4 text-gray-700 dark:text-gray-500">
-              Web Developer
+              Full Stack Developer
             </h2>
             <div className="flex items-center mb-10">
               <Icon icon="nodeJS" className="mr-4 text-green-500" />
