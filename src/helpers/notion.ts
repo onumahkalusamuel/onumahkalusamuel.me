@@ -1,16 +1,16 @@
-import { BlockMapType } from "react-notion";
-import { NotionAPI } from "notion-client";
+// import { BlockMapType } from "react-notion";
+// import { NotionAPI } from "notion-client";
 
-export interface NotionPost {
-  id: string;
-  slug: string;
-  title: string;
-  date: string;
-  category: string;
-  description: string;
-  blocks?: BlockMapType;
-  published: boolean;
-}
+// export interface NotionPost {
+//   id: string;
+//   slug: string;
+//   title: string;
+//   date: string;
+//   category: string;
+//   description: string;
+//   blocks?: BlockMapType;
+//   published: boolean;
+// }
 
 export interface NotionPage {
   id: string;
@@ -25,9 +25,9 @@ export const getTable = async <T = NotionPage>(
   ).then((res) => res.json());
 };
 
-export const getPageById = async (
-  pageId: string
-): Promise<ReturnType<NotionAPI["getPage"]>> => {
-  const api = new NotionAPI();
-  return api.getPage(pageId);
-};
+// export const getPageById = async (
+//   pageId: string
+// ): Promise<ReturnType<NotionAPI["getPage"]>> => {
+//   const api = new NotionAPI();
+//   return api.getPage(pageId);
+// };

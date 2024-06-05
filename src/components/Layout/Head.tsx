@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Head from "next/head";
-import { SITE_NAME, DEFAULT_LOCALE, SITE_DESCRIPTION } from "src/constants";
+import { SITE_NAME, DEFAULT_LOCALE, SITE_DESCRIPTION } from "@/constants";
 
 interface Props {
   title: string;

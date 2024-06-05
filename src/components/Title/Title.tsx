@@ -1,14 +1,10 @@
-import React, { FC } from "react";
+import React from "react";
 
-interface TitleProps {
-  className?: string;
-}
-
-export const Title: FC<TitleProps> = ({ children, className }) => {
-  const fontSize = className?.includes("text-") ? "" : "text-4xl lg:text-5xl";
-  return (
-    <h1 className={`leading-snug font-medium mb-10 ${fontSize} ${className}`}>
-      {children}
-    </h1>
-  );
+export const Title = ({children, className}: { children: React.ReactNode, className?: string }) => {
+    const fontSize = className?.includes("text-") ? "" : "text-4xl lg:text-5xl";
+    return (
+        <h1 className={`leading-snug font-medium mb-10 ${fontSize} ${className}`}>
+            {children}
+        </h1>
+    );
 };
