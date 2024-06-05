@@ -38,13 +38,13 @@ const backend = [
     },
     {
         title: "Node.JS",
-        extra: "+4 years",
+        extra: "+6 years",
         description: "Typescript, NestJS, Jest",
         icon: <Icon icon="nodeJS" className="text-green-500" />,
     },
     {
         title: "GoLang",
-        extra: "2 year",
+        extra: "+2 year",
         description: "Gin, Gorm, Cobra",
         icon: (
             <img src="/golang.png" width={30} style={{ paddingTop: 1 + "rem" }} alt={'golang'} />
@@ -55,22 +55,24 @@ const backend = [
 const frontend = [
     {
         title: "Node",
+        extra: '+6 years',
         description: "Typescript, VueJs, SvelteJS, jQuery",
         icon: <Icon icon="nodeJS" className="text-blue-500" />,
     },
     {
         title: "Styles",
-        description: "Twitter Bootstrap,TailwindCSS, Styled-Components",
+        extra: '+4 years',
+        description: "Twitter Bootstrap,TailwindCSS, DaisyUI, Styled-Components",
         icon: <Icon icon="css" className="text-blue-400" />,
     },
 ];
 
-const mobile = [
-    {
-        title: "Flutter",
-        extra: "colaboration",
-    },
-];
+// const mobile = [
+//     {
+//         title: "Flutter",
+//         extra: "collaboration",
+//     },
+// ];
 
 const databases = [
     {
@@ -82,10 +84,8 @@ const databases = [
     {
         title: "PostgreSQL",
     },
-    {
-        title: "DynamoDB",
-        extra: "serverless",
-    },
+    { title: "DynamoDB", },
+    {title: 'MongoDB'}
 ];
 
 const devops = [
@@ -95,28 +95,31 @@ const devops = [
     },
     {
         title: "Mailing",
-        description: "Mailgun, Amazon SES",
+        description: "Mailtrap, Mailgun, Amazon SES, SMTP",
     },
     {
         title: "Tools",
-        description: "Serverless (AWS, Vercel), Cloudflare, Github, Gitlab",
+        description: "Cloudflare, Github, Gitlab, Glances, Portainer",
     },
 ];
 
 const developmentTools = [
     {
-        title: "Visual Studio Code",
+        title: "IntelliJ Products (WebStorm, phpStorm)",
         description: "As my main IDE for development",
     },
     {
-        title: "Insomia",
-        description: "Design, Debug, and Deploy APIs",
+        title: "Visual Studio Code",
+        description: "Another favorite IDE I use",
     },
     {
-        title: "BrowserStack",
-        description:
-            "Instant access to 2000+ browsers and real iOS and Android devices for cross browser testing. ",
+        title: "Insomia, Postman",
+        description: "Test and Debug APIs",
     },
+    {
+        title: 'Vendure.io',
+        description: 'Customizable Headless eCommerce bootstrapper.'
+    }
 ];
 
 const design = [
@@ -158,18 +161,23 @@ const business = [
         description:
             "An internal communication tool, that can be integrated with many of the services mentioned here.",
     },
+    {
+        title: "Discord",
+        description:
+          "Find help on servers dedicated to a tool or language.",
+    },
 ];
 
-const marketing = [
-    {
-        title: "Ads",
-        description: "Google Ads, Facebook Ads, Bing Ads",
-    },
-    {
-        title: "SEO",
-        description: "Google Analytics, Webmaster Tools, Hotjar",
-    },
-];
+// const marketing = [
+//     {
+//         title: "Ads",
+//         description: "Google Ads, Facebook Ads, Bing Ads",
+//     },
+//     {
+//         title: "SEO",
+//         description: "Google Analytics, Webmaster Tools, Hotjar",
+//     },
+// ];
 
 export default function () {
     return (
@@ -193,11 +201,11 @@ export default function () {
                     <Item key={item.title} {...item} />
                 ))}
 
-                {/* Mobile */}
-                <Category>Mobile</Category>
-                {mobile.map((item) => (
-                    <Item key={item.title} {...item} />
-                ))}
+                {/*/!* Mobile *!/*/}
+                {/*<Category>Mobile</Category>*/}
+                {/*{mobile.map((item) => (*/}
+                {/*    <Item key={item.title} {...item} />*/}
+                {/*))}*/}
 
                 {/* Databases */}
                 <Category>Databases</Category>
@@ -229,11 +237,11 @@ export default function () {
                     <Item key={item.title} {...item} />
                 ))}
 
-                {/* Marketing */}
-                <Category>Marketing</Category>
-                {marketing.map((item) => (
-                    <Item key={item.title} {...item} />
-                ))}
+                {/*/!* Marketing *!/*/}
+                {/*<Category>Marketing</Category>*/}
+                {/*{marketing.map((item) => (*/}
+                {/*    <Item key={item.title} {...item} />*/}
+                {/*))}*/}
             </Layout.Main>
         </Layout>
     );
